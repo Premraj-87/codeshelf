@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "React useState Hook",
+    "code": "const [state, setState] = useState(initialValue);",
+    "language": "javascript",
+    "tags": ["react", "hook", "state"],
+    "createdAt": "2026-02-16"
+  },
+  {
+    "id": 2,
+    "title": "Array Map Example",
+    "code": "const newArray = array.map(item => item * 2);",
+    "language": "javascript",
+    "tags": ["javascript", "array", "map"],
+    "createdAt": "2026-02-16"
+  }
+]

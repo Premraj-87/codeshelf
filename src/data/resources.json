@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "React Official Docs",
+    "type": "link",
+    "url": "https://react.dev",
+    "tags": ["react", "docs"],
+    "createdAt": "2026-02-16"
+  },
+  {
+    "id": 2,
+    "title": "Tailwind Cheat Sheet",
+    "type": "pdf",
+    "url": "/assets/tailwind-cheatsheet.pdf",
+    "tags": ["css", "tailwind"],
+    "createdAt": "2026-02-16"
+  }
+]
