@@ -35,7 +35,7 @@ const Sidebar = () => {
       {/* Mobile Hamburger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-50 md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-700 bg-white border border-gray-200"
+        className="fixed top-4 right-4 z-50 md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-700 bg-white border border-gray-200"
         aria-label="Toggle menu"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,20 +52,12 @@ const Sidebar = () => {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed md:sticky left-0 top-0 h-screen md:h-auto bg-white border-r border-gray-200 transition-transform duration-300 z-40 w-64 md:relative md:translate-x-0 ${
+      <div className={`fixed md:relative left-0 top-0 h-screen md:h-auto bg-white border-r border-gray-200 transition-transform duration-300 z-40 w-64 md:translate-x-0 ${
         isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
       }`}>
         {/* Header */}
-        <div className="p-4 md:p-6 border-b border-gray-200 flex items-center justify-between">
+        <div className="p-4 md:p-6 border-b border-gray-200">
           <h1 className="text-lg md:text-xl font-bold text-gray-900 whitespace-nowrap">CodeShelf</h1>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-700"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
 
         {/* Navigation */}

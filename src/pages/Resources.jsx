@@ -5,20 +5,19 @@ import Skeleton from "../components/Skeleton";
 import { Card } from "../components/DashboardComponents";
 
 const Resources = () => {
-  const [resources, setResources] = useState([]);
+  const [resources] = useState(() => {
+    const existing = loadData("resources", []);
+    if (existing.length === 0) {
+      saveData("resources", resourcesData);
+      return resourcesData;
+    }
+    return existing;
+  });
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedType, setSelectedType] = useState("All");
 
   useEffect(() => {
-    const existing = loadData("resources", []);
-    if (existing.length === 0) {
-      saveData("resources", resourcesData);
-      setResources(resourcesData);
-    } else {
-      setResources(existing);
-    }
-
     const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);

@@ -10,7 +10,7 @@ export const Card = ({ children, className = '' }) => {
 };
 
 // Stat Card
-export const StatCard = ({ icon, label, value }) => {
+export const StatCard = ({ label, value }) => {
   return (
     <Card>
       <div className="flex flex-col items-center space-y-2 text-center md:flex-col">

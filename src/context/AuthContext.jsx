@@ -1,14 +1,12 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
+  const [isAdmin, setIsAdmin] = useState(() => {
     const saved = localStorage.getItem("isAdmin");
-    if (saved === "true") setIsAdmin(true);
-  }, []);
+    return saved === "true";
+  });
 
   const login = (password) => {
     if (password === "codeshelf123") {

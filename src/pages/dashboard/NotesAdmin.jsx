@@ -1,24 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { loadData, saveData } from "../../utils/localStorage";
 import notesData from "../../data/notes.json";
 
 const NotesAdmin = () => {
-  const [notes, setNotes] = useState([]);
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [editId, setEditId] = useState(null); // ✅ edit state
-  const [category, setCategory] = useState("General");
-  const [tags, setTags] = useState("");
-
-  useEffect(() => {
+  const [notes, setNotes] = useState(() => {
     const existing = loadData("notes", []);
     if (existing.length === 0) {
       saveData("notes", notesData);
-      setNotes(notesData);
-    } else {
-      setNotes(existing);
+      return notesData;
     }
-  }, []);
+    return existing;
+  });
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [editId, setEditId] = useState(null);
+  const [category, setCategory] = useState("General");
+  const [tags, setTags] = useState("");
 
   const handleAddOrEdit = () => {
     const tagArray = tags.split(",").map((t) => t.trim()).filter(Boolean);
@@ -68,7 +65,7 @@ const NotesAdmin = () => {
 
   return (
     <div>
-      <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 font-semibold tracking-tight\">Manage Notes</h2>
+      <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 tracking-tight">Manage Notes</h2>
 
       {/* Add/Edit Note Form */}
       <div className="mb-6 border border-gray-200 p-4 md:p-6 rounded-lg bg-white\">

@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { loadData, saveData } from "../utils/localStorage";
 import { Card } from "../components/DashboardComponents";
 
 const Bookmarks = () => {
-  const [bookmarks, setBookmarks] = useState([]);
-
-  useEffect(() => {
-    const saved = loadData("bookmarks", []);
-    setBookmarks(saved);
-  }, []);
+  const [bookmarks, setBookmarks] = useState(() => {
+    return loadData("bookmarks", []);
+  });
 
   const removeBookmark = (id) => {
     const updated = bookmarks.filter(b => b.id !== id);

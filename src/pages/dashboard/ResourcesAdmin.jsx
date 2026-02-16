@@ -66,7 +66,7 @@ const ResourcesAdmin = () => {
 
   return (
     <div>
-      <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 font-semibold tracking-tight">Manage Resources</h2>
+      <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6 tracking-tight">Manage Resources</h2>
 
       {/* Add/Edit Resource Form */}
       <div className="mb-6 border border-gray-200 p-4 md:p-6 rounded-lg bg-white">

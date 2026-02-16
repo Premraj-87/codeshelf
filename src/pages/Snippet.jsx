@@ -5,20 +5,20 @@ import Skeleton from "../components/Skeleton";
 import { Card } from "../components/DashboardComponents";
 
 const Snippets = () => {
-  const [snippets, setSnippets] = useState([]);
+  const [snippets] = useState(() => {
+    const existing = loadData("snippets", []);
+    if (existing.length === 0) {
+      saveData("snippets", snippetsData);
+      return snippetsData;
+    }
+    return existing;
+  });
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("All");
   const [copiedId, setCopiedId] = useState(null);
 
   useEffect(() => {
-    const existing = loadData("snippets", []);
-    if (existing.length === 0) {
-      saveData("snippets", snippetsData);
-      setSnippets(snippetsData);
-    } else {
-      setSnippets(existing);
-    }
 
     const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);

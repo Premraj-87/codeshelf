@@ -1,14 +1,12 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
-    setDarkMode(saved === "true");
-  }, []);
+    return saved === "true";
+  });
 
   const toggleTheme = () => {
     setDarkMode((prev) => {
