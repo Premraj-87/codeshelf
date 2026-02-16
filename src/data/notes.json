@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "React Router v6 Basics",
+    "content": "Learn how to use React Router v6 for dynamic routing in React...",
+    "category": "React",
+    "tags": ["routing", "react-router", "frontend"],
+    "createdAt": "2026-02-16"
+  },
+  {
+    "id": 2,
+    "title": "Context API Mastery",
+    "content": "Learn how to use Context API for global state management in React...",
+    "category": "React",
+    "tags": ["context", "state", "frontend"],
+    "createdAt": "2026-02-16"
+  }
+]
