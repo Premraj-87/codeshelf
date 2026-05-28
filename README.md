@@ -1,16 +1,48 @@
-# React + Vite
+# CodeShelf
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern project management tool for developers to organize, manage, and quickly access their coding projects in one place.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Demo
 
-## React Compiler
+https://codeshelf-delta.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Organize projects in a clean workspace layout  
+- Quick access to development projects  
+- Lightweight and fast UI  
+- Easy project switching and management  
+- Developer-friendly interface  
+- Minimal and distraction-free design  
+- Responsive layout for all devices  
+
+---
+
+## Tech Stack
+
+React.js  
+Tailwind CSS  
+JavaScript (ES6+)  
+Vercel (Deployment)  
+
+---
+
+## Project Overview
+
+CodeShelf is designed to simplify how developers manage multiple projects. Instead of switching between folders manually, it provides a structured and visual way to organize development work.
+
+The goal is to improve productivity by keeping all projects accessible and neatly organized in one place.
+
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/your-username/codeshelf.git
+cd codeshelf
+npm install
+npm run dev
